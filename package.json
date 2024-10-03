@@ -1,0 +1,37 @@
+{
+    "name": "@directus-forge/extensions",
+    "version": "0.0.1",
+    "description": "A mini framework that helps you build a Directus extension",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "clean": "rimraf ./dist",
+        "build": "npm run clean && tsc"
+    },
+    "author": "Maciej Rybczonek",
+    "license": "ISC",
+    "dependencies": {
+        "@directus/errors": "^1.0.0",
+        "@directus/extensions": "^2.0.1",
+        "@types/node": "^20.12.7",
+        "express": "^4.19.2",
+        "express-useragent": "^1.0.15",
+        "reflect-metadata": "^0.2.2",
+        "tsyringe": "^4.8.0",
+        "typescript": "^5.4.5",
+        "uuid": "^9.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "^20.12.7",
+        "@typescript-eslint/eslint-plugin": "^7.7.0",
+        "@typescript-eslint/parser": "^7.7.0",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "prettier": "^3.2.5",
+        "prettier-eslint": "^16.3.0",
+        "rimraf": "^6.0.1"
+    },
+    "engines": {
+        "node": ">= 20.17.0"
+    }
+}
