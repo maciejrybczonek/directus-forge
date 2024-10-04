@@ -3,6 +3,7 @@ import { RequestMethod, RequestContext } from '../types';
 import { EndpointExtensionContext } from '@directus/extensions';
 import { NextFunction, Request, Response, Router } from 'express';
 import { DependencyContainer } from 'tsyringe';
+import { BaseController } from '../controllers/base-controller.class';
 
 const createContextMiddleware = (context: EndpointExtensionContext) => {
     return (req: Request, res: Response, next: NextFunction) => {
@@ -11,13 +12,13 @@ const createContextMiddleware = (context: EndpointExtensionContext) => {
     };
 };
 
-export const initEndpoints = async ({
+export const initEndpoints = async <T extends BaseController>({
     controllers,
     router,
     context,
     container,
 }: {
-    controllers: { new (...args: any[]): any }[];
+    controllers: { new (...args: unknown[]): T }[];
     router: Router;
     context: EndpointExtensionContext;
     container: DependencyContainer;

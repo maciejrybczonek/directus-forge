@@ -8,7 +8,7 @@ export const Controller = (path?: string): ClassDecorator => {
     };
 };
 
-export const CatchError = (target: any, propertyName: string, descriptor: PropertyDescriptor): void => {
+export const CatchError = (target: never, propertyName: string, descriptor: PropertyDescriptor): void => {
     const originalMethod = descriptor.value;
     descriptor.value = async function (req: Request, res: Response) {
         try {
