@@ -1,6 +1,6 @@
 {
     "name": "@directus-forge/extensions",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A mini framework that helps you build a Directus extension",
     "keywords": ["directus", "framework", "extensions"],
     "main": "dist/index.js",
