@@ -3,7 +3,7 @@
         "target": "ES5",
         "lib": ["es2021", "DOM"],
         "moduleResolution": "node",
-        "module": "CommonJS",
+        "module": "ESNext",
         "declaration": true,
         "strict": true,
         "noFallthroughCasesInSwitch": true,
